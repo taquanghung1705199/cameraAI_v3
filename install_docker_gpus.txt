@@ -1,0 +1,40 @@
+install docker-ce
+curl -s -L https://nvidia.github.io/nvidia-docker/rhel7.6/nvidia-docker.repo | sudo tee /etc/yum.repos.d/nvidia-docker.repo
+sudo yum install --disableexcludes=all -y nvidia-container-toolkit
+sudo yum install nvidia-container-runtime
+sudo systemctl restart docker
+sudo usermod -aG docker $USER
+
+
+
+#check driver now
+sudo lshw -class display
+
+# doc guild install driver nvidia
+https://www.cyberciti.biz/faq/how-to-install-nvidia-driver-on-centos-7-linux/
+https://gist.github.com/tomlankhorst/33da3c4b9edbde5c83fc1244f010815c
+
+
+
+#MAIN
+curl -s -L https://nvidia.github.io/nvidia-docker/rhel7.6/nvidia-docker.repo | sudo tee /etc/yum.repos.d/nvidia-docker.repo
+sudo yum install --disableexcludes=all -y nvidia-container-toolkit
+sudo yum install nvidia-container-runtime
+sudo systemctl restart docker
+
+docker run --gpus all nvidia/cuda:11.3.0-base-ubuntu20.04 nvidia-smi
+open /etc/docker/daemon.json add:
+
+{
+  "runtimes": {
+    "nvidia": {
+      "path": "/usr/bin/nvidia-container-runtime",
+      "runtimeArgs": []
+    }
+  },
+  "default-runtime": "nvidia"
+}
+
+Uncommenting the following in /etc/nvidia-container-runtime/config.toml
+swarm-resource = "DOCKER_RESOURCE_GPU"
+sudo systemctl restart docker.service

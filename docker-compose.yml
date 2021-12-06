@@ -1,0 +1,48 @@
+version: "3.7"
+services:
+
+  getvideo:
+    image: taquanghung1705199/get_video:0.1
+    volumes:
+      - .:/getvideo
+
+    environment:
+      FLASK_ENV: development
+
+    deploy:
+      resources:
+        limits:
+          cpus: '1'
+          memory: '1G'
+
+    command: bash -c "cd src && python get_video.py"
+  
+  recommender:
+    image: taquanghung1705199/fhs_camera_ai:0.1
+    logging:
+        driver: "json-file"
+        options:
+            max-file: 1
+            max-size: 5m
+    volumes:
+      #- .:/FastMOT
+      # - /app/cameraAI_v2/data/:/data/
+      - /app/cameraAI_v2:/FastMOT
+      - /app/cameraAI_v2/data/:/FastMOT/src/data/
+
+    environment:
+      FLASK_ENV: development
+      # PYTHONPATH: /FastMOT/src:$PYTHONPATH
+
+    deploy:
+      resources:
+        limits:
+          cpus: '8'
+          memory: '15G'
+
+    # command: bash -c "tail -f /dev/null"
+    # command: bash -c "python /FastMOT/src/main.py -n 4 -d /data"
+    # command: python  /FastMOT/src/main.py -n 4 -d /data
+    # command: bash -c "cd /FastMOT/src && python main.py -n 4 -d /data"
+    command: bash -c "cd /FastMOT/src && python main.py -n 4 -d /FastMOT/src/data"
+    # command: bash -c "cd /FastMOT && sleep 70 && /usr/bin/sh ./run.sh"

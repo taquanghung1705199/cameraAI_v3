@@ -1,0 +1,155 @@
+{
+    "block_time": 60,  
+    "store_name": "tandinh",
+    "open_time": "8:30",
+    "close_time": "22:00",
+        
+    "cameras": [
+        {
+            "name": "cam_1",
+            "rtsp": "rtsp://admin:246fahasa@14.161.12.249:554/Streaming/Channels/101",
+            "floor": 1,
+            "regions":[
+                {
+                    "regionID": "57a9faa5-6656-4a9c-8593-022b4385eef7",
+                    "type": "line",
+                    "name": "left",
+                    "points": "(209, 458), (508, 116)"
+                },
+                {
+                    "regionID": "eb86e6e9-ee87-4258-8612-f0d76eb16580",
+                    "type": "line",
+                    "name": "right",
+                    "points": "(683, 93), (800, 462)"
+                },
+                {
+                    "regionID": "d503930a-866e-4843-898c-477fb7787d0b",
+                    "type": "polygon",
+                    "name": "reading",
+                    "points": "[[106, 245], [319, 257], [440, 133], [275, 101]]"
+                }
+            ]
+        },
+        {
+            "name": "cam_2",
+            "rtsp": "rtsp://admin:246fahasa@14.161.12.249:554/Streaming/Channels/201",
+            "floor": 0,
+            "regions":[
+                {
+                    "regionID": "d41a4965-e013-47d0-8889-19aa2754c768",
+                    "type": "line",
+                    "name": "in&out",
+                    "points": "(21, 147), (145, 161)"
+                },
+                {
+                    "regionID": "ad5aee30-96a7-483b-bff6-f4654df3bac1",
+                    "type": "polygon",
+                    "name": "cash",
+                    "points": "[[334, 174], [543, 179], [447, 431], [279, 424]]"
+                }
+            ]
+        },
+        {
+            "name": "cam_3",
+            "rtsp": "rtsp://admin:246fahasa@14.161.12.249:554/Streaming/Channels/301",
+            "floor": 0,
+            "regions":[
+                {
+                    "regionID": "95be95d6-586f-46cb-b350-766e29ae6f26",
+                    "type": "line",
+                    "name": "random1",
+                    "points": "(202, 188), (351, 225)"
+                },
+                {
+                    "regionID": "1890dd84-d9d1-4d6c-99ef-8c6b8ba8412f",
+                    "type": "polygon",
+                    "name": "random2",
+                    "points": "[[473, 196], [394, 329], [626, 369], [654, 230]]"
+                }
+            ]
+        },
+        {
+            "name": "cam_4",
+            "rtsp": "rtsp://admin:246fahasa@14.161.12.249:554/Streaming/Channels/401",
+            "floor": 1,
+            "regions":[
+                {
+                    "regionID": "5347d8cf-fbfb-4602-bd0d-a11cf9492dae",
+                    "type": "polygon",
+                    "name": "cash",
+                    "points": "[[231, 146], [604, 146], [640, 367], [265, 374]]"
+                }
+            ]
+        },
+        {
+            "name": "cam_5",
+            "rtsp": "rtsp://admin:246fahasa@14.161.12.249:554/Streaming/Channels/501",
+            "floor": 0,
+            "regions":[
+                {
+                    "regionID": "55b5833e-f5aa-4fbe-b687-9bf123a3818f",
+                    "type": "line",
+                    "name": "in&out",
+                    "points": "(691, 167), (749, 273)"
+                }
+            ]
+        },
+        {
+            "name": "cam_6",
+            "rtsp": "rtsp://admin:246fahasa@14.161.12.249:554/Streaming/Channels/601",
+            "floor": 1,
+            "regions":[
+                {
+                    "regionID": "6d983cec-e79b-4223-8666-33e93b53c6df",
+                    "type": "line",
+                    "name": "up&down",
+                    "points": "(610, 268), (545, 452)"
+                }
+            ]
+        },
+        {
+            "name": "cam_7",
+            "rtsp": "rtsp://admin:246fahasa@14.161.12.249:554/Streaming/Channels/701",
+            "floor": 1,
+            "regions":[
+                {
+                    "regionID": "813cc745-c353-456d-81e9-6669881c9c57",
+                    "type": "line",
+                    "name": "random1",
+                    "points": "(342, 244), (553, 207)"
+                },
+                {
+                    "regionID": "e6aef3b7-b63b-4021-98ca-637806c40d62",
+                    "type": "polygon",
+                    "name": "random2",
+                    "points": "[[344, 244], [553, 221], [710, 419], [429, 474]]"
+                }
+            ]
+        },
+        {
+            "name": "cam_8",
+            "rtsp": "rtsp://admin:246fahasa@14.161.12.249:554/Streaming/Channels/801",
+            "floor": 1,
+            "regions":[
+                {
+                    "regionID": "0dad33cb-d9a7-4442-b32b-168b6a0ed79f",
+                    "type": "line",
+                    "name": "random1",
+                    "points": "(343, 240), (406, 304)"
+                },
+                {
+                    "regionID": "6e41ea7a-8bfc-4208-aaad-5b193a59a534",
+                    "type": "line",
+                    "name": "random3",
+                    "points": "(228, 117), (280, 182)"
+                },
+                {
+                    "regionID": "01346690-4478-4f02-ba86-62255605a727",
+                    "type": "polygon",
+                    "name": "random2",
+                    "points": "[[778, 290], [923, 356], [692, 470], [562, 354]]"
+                }
+            ]
+        }
+    ]
+}

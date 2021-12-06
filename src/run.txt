@@ -1,0 +1,16 @@
+#run on docker
+#host
+docker run --gpus all --name hung -it --memory='7.5g' --memory-swap='7.5g' -v $(pwd):/usr/src/app/FastMOT -v /tmp/.X11-unix:/tmp/.X11-unix -e DISPLAY=unix$DISPLAY {image}
+#user
+docker run --gpus all --name hung -it --memory='7.5g' --memory-swap='7.5g' -v /tmp/.X11-unix:/tmp/.X11-unix -e DISPLAY=$DISPLAY {image}
+
+python main.py -n 4
+
+Note: 
+check init trt engine: 
+cd fastmot/plugin 
+make
+
+
+
+check id object detect in cfg folder

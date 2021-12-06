@@ -1,0 +1,20 @@
+##Init trt
+cd fastmot/plugins
+make
+return main folder
+
+#1:
+get image
+python get-image.py
+
+#2:
+draw on image
+python draw_line.py
+python draw_polygon.py
+
+#3:
+copy info draw to config.json
+
+#4:
+run with main.py -n 5
+(5 processes)

@@ -1,0 +1,14 @@
+[
+    {
+        "regionID": "0dad33cb-d9a7-4442-b32b-168b6a0ed79f",
+        "type": "line",
+        "name": "",
+        "points": "(343, 240), (406, 304)"
+    },
+    {
+        "regionID": "6e41ea7a-8bfc-4208-aaad-5b193a59a534",
+        "type": "line",
+        "name": "",
+        "points": "(228, 117), (280, 182)"
+    }
+]
